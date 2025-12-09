@@ -1,108 +1,197 @@
-/* Basic reset & typografi */
+/* ================================
+   RESET & BASE STYLES
+================================ */
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   line-height: 1.6;
+  background: #f7f7f7;
   color: #333;
 }
+
+/* Container */
 .container {
-  width: 90%;
-  max-width: 1000px;
+  width: min(90%, 1200px);
   margin: 0 auto;
 }
 
-/* Header / nav */
-.site-header {
-  background: #f8f9fa;
-  padding: 20px 0;
-  border-bottom: 1px solid #eaeaea;
+/* ================================
+   HEADER & NAVIGATION
+================================ */
+
+header {
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e5e5;
 }
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+header h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1a1a1a;
 }
-.site-title {
-  font-size: 1.8rem;
-}
-.site-nav ul {
+
+header nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
-.site-nav a {
+
+header nav a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
 }
-.site-nav a:hover {
+
+header nav a:hover {
   color: #0076ad;
 }
 
-/* Hero section */
-.hero {
-  background: url('path/to/your-hero-image.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 120px 0;
-}
-.hero-content h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 10px;
-}
-.hero-content p {
-  font-size: 1.1rem;
+/* Navigation layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 5%;
 }
 
-/* Cards container */
+/* Mobile nav */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header nav ul {
+    gap: 15px;
+  }
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+  background: url("hero.jpg") center/cover no-repeat;
+  padding: 120px 20px;
+  color: white;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 10px;
+  text-shadow: 0 3px 15px rgba(0,0,0,0.4);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* ================================
+   CARD SLIDER (YOUR CARDS)
+================================ */
+
 .card-container {
   position: relative;
-  margin: 60px 0;
+  margin: 60px auto;
   min-height: 260px;
+  width: min(90%, 700px);
 }
+
 .card {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px;
+  inset: 0;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.12);
   opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(10px) scale(0.96);
+  transition: all 0.6s ease;
   pointer-events: none;
   z-index: 0;
 }
+
 .card.active {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0) scale(1);
   pointer-events: auto;
   z-index: 10;
 }
+
+.card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 12px 24px;
   background: #0076ad;
   color: white;
   text-decoration: none;
+  font-weight: 600;
   border-radius: 6px;
-  margin-top: 12px;
-}
-.btn:hover {
-  background: #005f8a;
+  transition: background 0.25s ease, transform 0.2s ease;
 }
 
-/* Footer */
-.site-footer {
-  background: #f8f9fa;
-  padding: 20px 0;
+.btn:hover {
+  background: #005f8a;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e5e5;
   text-align: center;
-  border-top: 1px solid #eaeaea;
+  padding: 20px 0;
   margin-top: 60px;
+}
+
+footer small {
+  color: #666;
+}
+
+/* ================================
+   MEDIA QUERIES
+================================ */
+
+@media (max-width: 600px) {
+  .card {
+    padding: 22px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
 }
