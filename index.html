@@ -1,57 +1,70 @@
 <!doctype html>
 <html lang="sv">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hemsida Montessori</title>
-    <link rel="stylesheet" href="StyleSheet.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Montessori Mondial</h1>
-      <nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Montessori Mondial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <h1 class="site-title">Montessori Mondial</h1>
+      <nav class="site-nav">
         <ul>
           <li><a href="#hem">Hem</a></li>
           <li><a href="#no">NO</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="card-container">
-        <div class="card active">
-          <h2>Matematik</h2>
-          <p>Utforska siffror, logik och problemlösning.</p>
-          <a href="matematik.html" class="btn">Läs mer</a>
-        </div>
-        <div class="card">
-          <h2>NO</h2>
-          <p>Upptäck naturvetenskapens spännande värld.</p>
-          <a href="https://cakeloverthe1andonly.github.io/NO-25-26" class="btn">Läs mer</a>
-        </div>
-        <div class="card">
-          <h2>Historia</h2>
-          <p>Lär dig om människans utveckling genom tiderna.</p>
-          <a href="historia.html" class="btn">Läs mer</a>
-        </div>
-        <div class="card">
-          <h2>Språk</h2>
-          <p>Förbättra dina kunskaper i svenska och engelska.</p>
-          <a href="sprak.html" class="btn">Läs mer</a>
-        </div>
-        <div class="card">
-          <h2>Religion</h2>
-          <p>Utforska olika religioner och förstå människors tro och traditioner.</p>
-          <a href="https://cakeloverthe1andonly.github.io/Religion-25-26/" class="btn">Läs mer</a>
-        </div>
-      </section>
-    </main>
+  <main>
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h2>Välkommen till Montessori Mondial</h2>
+        <p>Upptäck våra ämnen och lär dig mer.</p>
+      </div>
+    </section>
 
-    <footer>
+    <!-- Cards -->
+    <section class="card-container container">
+      <div class="card active">
+        <h2>Matematik</h2>
+        <p>Utforska siffror, logik och problemlösning.</p>
+        <a href="matematik.html" class="btn">Läs mer</a>
+      </div>
+      <div class="card">
+        <h2>NO</h2>
+        <p>Upptäck naturvetenskapens spännande värld.</p>
+        <a href="https://cakeloverthe1andonly.github.io/NO-25-26" class="btn">Läs mer</a>
+      </div>
+      <div class="card">
+        <h2>Historia</h2>
+        <p>Lär dig om människans utveckling genom tiderna.</p>
+        <a href="historia.html" class="btn">Läs mer</a>
+      </div>
+      <div class="card">
+        <h2>Språk</h2>
+        <p>Förbättra dina kunskaper i svenska och engelska.</p>
+        <a href="sprak.html" class="btn">Läs mer</a>
+      </div>
+      <div class="card">
+        <h2>Religion</h2>
+        <p>Utforska olika religioner och förstå människors tro och traditioner.</p>
+        <a href="https://cakeloverthe1andonly.github.io/Religion-25-26/" class="btn">Läs mer</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
       <small>&copy; 2025 Montessori Mondial</small>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
