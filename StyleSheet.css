@@ -1,22 +1,108 @@
+/* Basic reset & typografi */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header / nav */
+.site-header {
+  background: #f8f9fa;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-title {
+  font-size: 1.8rem;
+}
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.site-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.site-nav a:hover {
+  color: #0076ad;
+}
+
+/* Hero section */
+.hero {
+  background: url('path/to/your-hero-image.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 0;
+}
+.hero-content h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 1.1rem;
+}
+
+/* Cards container */
+.card-container {
+  position: relative;
+  margin: 60px 0;
+  min-height: 260px;
+}
 .card {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 25px;
+  padding: 30px;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.6s ease, transform 0.6s ease;
   pointer-events: none;
-  z-index: 0; /* <-- Make inactive cards lowest */
+  z-index: 0;
 }
-
 .card.active {
   opacity: 1;
   transform: scale(1);
-  pointer-events: auto; 
-  z-index: 10;          
+  pointer-events: auto;
+  z-index: 10;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #0076ad;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 12px;
+}
+.btn:hover {
+  background: #005f8a;
+}
+
+/* Footer */
+.site-footer {
+  background: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #eaeaea;
+  margin-top: 60px;
 }
