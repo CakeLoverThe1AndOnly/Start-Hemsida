@@ -1,64 +1,46 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fafafa;
-}
-
-header {
-  background: #4a90e2;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
+/* Container: centrerar allt */
 .card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
   position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  min-height: 220px; /* så att containern inte hoppar i höjd */
 }
 
+/* Grund för kort */
 .card {
   position: absolute;
-  width: 300px;
-  padding: 2rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none; /* så bara aktiva kort kan klickas */
 }
 
+/* När ett kort visas */
 .card.active {
   opacity: 1;
   transform: scale(1);
+  pointer-events: auto;
 }
 
+/* Knapp */
 .btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #4a90e2;
+  padding: 10px 20px;
+  background: #0076ad;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #005f8a;
 }
