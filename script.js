@@ -8,4 +8,4 @@ function showNextCard() {
 }
 
 // Byt kort var 4:e sekund
-setInterval(showNextCard, 4000);
+setInterval(showNextCard, 2000);
